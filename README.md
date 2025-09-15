@@ -1,6 +1,5 @@
 Modul Praktikum Flutter
 Pembuatan Form Login dan Registrasi Interaktif
-Wireframe
 
 1. Validasi Input: Tambahkan validasi yang lebih baik. Misalnya, cek apakah email
 memiliki format yang benar (mengandung ’@’) atau password memiliki panjang
@@ -8,7 +7,7 @@ minimal 6 karakter.
 ![7](https://github.com/user-attachments/assets/e98d3357-5826-4569-a873-22ea7e9b514f)
 <img width="1660" height="1340" alt="carbon (4)" src="https://github.com/user-attachments/assets/affc1aea-e84c-460e-bf71-6d3188a6314d" />
 
-- jika login gagal
+- jika login gagal 
 ![8](https://github.com/user-attachments/assets/413c43aa-25d2-43f4-8b0b-c5230f7c977a)
 
 2. Tampilkan/Sembunyikan Password: Tambahkan ikon mata pada TextField
@@ -43,10 +42,10 @@ perlu login ulang jika sesinya masih aktif.
 -main
 <img width="1626" height="1712" alt="carbon (9)" src="https://github.com/user-attachments/assets/2705f0a6-e8be-45e5-9747-796cb43457a5" />
 
-Home Mengarahkan user kembali ke halaman login, mencegah user kembali ke halaman sebelumnya dengan tombol back:
+Untuk mengarahkan pengguna kembali ke halaman login dan mencegah mereka kembali ke halaman sebelumnya dengan tombol back, gunakan navigasi yang menghapus semua riwayat halaman, misalnya dengan pushNamedAndRemoveUntil. Dengan cara ini, saat pengguna logout atau sesi berakhir, halaman lama tidak tersisa di stack, sehingga tombol back tidak bisa membawa pengguna kembali ke halaman sebelumnya.
 <img width="1456" height="744" alt="carbon (10)" src="https://github.com/user-attachments/assets/f6937227-2bc8-40ea-bb55-6b01980c23e0" />
 
-Pubspec.yaml shared_preferences ditambahkan supaya aplikasi bisa menyimpan status login user di penyimpanan lokal (mirip cache). Kalau tidak ditambahkan, Flutter tidak tahu harus ambil package itu dari mana
+Baris shared_preferences di dalam pubspec.yaml ditambahkan agar Flutter bisa menggunakan package tersebut untuk menyimpan data sederhana seperti status login ke penyimpanan lokal. Jika tidak dicantumkan, aplikasi tidak bisa mengakses library itu karena Flutter tidak tahu sumber dependensinya.
 <img width="1508" height="1340" alt="carbon (11)" src="https://github.com/user-attachments/assets/1b4fa34a-c757-4148-abe0-1c0e24e639b1" />
 
 hasil
